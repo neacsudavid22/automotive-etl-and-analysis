@@ -1,10 +1,22 @@
 CREATE TABLE clean_vehicle_data AS
 SELECT DISTINCT
-    UPPER(TRIM(constructor_name)) as constructor_name,
+    UPPER(TRIM(
+        REGEXP_REPLACE(
+                REGEXP_REPLACE(constructor_name, ',', ''),
+        '\s+', ' ' ))
+    ) AS constructor_name,
     vehicle_type,
     version,
-    UPPER(TRIM(brand)) as brand,
-    UPPER(TRIM(vehicle_model)) as vehicle_model,
+    UPPER(TRIM(
+        REGEXP_REPLACE(
+                REGEXP_REPLACE(brand, ',', ''),
+        '\s+', ' ' ))
+    ) AS brand,
+    UPPER(TRIM(
+        REGEXP_REPLACE(
+                REGEXP_REPLACE(vehicle_model, ',', ''),
+        '\s+', ' ' ))
+    ) AS vehicle_model,
     vehicle_category,
     kg_veh,
     test_mass,
