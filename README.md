@@ -9,7 +9,7 @@ This repository contains an ELT and analysis pipeline for automotive data, devel
 
 ## Entity Relationship Diagram
 
-- ![Database Diagram](project_media/dbdiagram.png)
+- ![Database Diagram](ERD.png)
 
 ## Project Structure
 
