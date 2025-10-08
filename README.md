@@ -55,6 +55,7 @@ Find ready-to-use SQL queries in the [`queries/`](queries) folder:
 - [`sdad.sql`](queries/sdad.sql): (Query purpose to be clarified; placeholder or experimental query.)
 - [`top_worst_models_by_fuel_consumption.sql`](queries/top_worst_models_by_fuel_consumption.sql): Lists models with the best and worst fuel consumption.
 - [`yearly_growth_per_brand.sql`](queries/yearly_growth_per_brand.sql): Shows yearly sales growth for each brand.
+- [`vehicle_weight_price_analysis.sql`](queries/vehicle_weight_price_analysis.sql): Analyzes the relationship between vehicle weight and selling price, showing average weight, average price, and price per kilogram for each model and brand.
 
 ## Usage
 
