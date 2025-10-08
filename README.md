@@ -52,7 +52,7 @@ Find ready-to-use SQL queries in the [`queries/`](queries) folder:
 - [`odometer_sales_influence.sql`](queries/odometer_sales_influence.sql): Analyzes the influence of odometer readings on sales.
 - [`rank_brands_by_green_models_distribution.sql`](queries/rank_brands_by_green_models_distribution.sql): Ranks brands by the proportion of green (eco-friendly) models.
 - [`sales_and_revenue_ratio.sql`](queries/sales_and_revenue_ratio.sql): Calculates the ratio between sales volume and revenue per brand or model.
-- [`sdad.sql`](queries/sdad.sql): (Query purpose to be clarified; placeholder or experimental query.)
+- [`vehicle_weight_price_analysis.sql`](queries/vehicle_weight_price_analysis.sql): Analyzes the relationship between vehicle weight and selling price, showing average weight, average price, and price per kilogram for each model and brand.
 - [`top_worst_models_by_fuel_consumption.sql`](queries/top_worst_models_by_fuel_consumption.sql): Lists models with the best and worst fuel consumption.
 - [`yearly_growth_per_brand.sql`](queries/yearly_growth_per_brand.sql): Shows yearly sales growth for each brand.
 - [`vehicle_weight_price_analysis.sql`](queries/vehicle_weight_price_analysis.sql): Analyzes the relationship between vehicle weight and selling price, showing average weight, average price, and price per kilogram for each model and brand.
