@@ -9,7 +9,6 @@ This repository contains an ELT and analysis pipeline for automotive data, devel
 
 ## Project Structure
 
-- `datasets/` — Raw CSV data files (`car_sells.csv`, `vehicles.csv`)
 - `setup/` — SQL scripts for schema creation, cleaning, and data loading
 - `queries/` — Analytical SQL queries for reporting and insights
 - `project_media/` — Project-related media files
