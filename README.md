@@ -7,6 +7,10 @@ This repository contains an ELT and analysis pipeline for automotive data, devel
 - [Vehicle Technical Specifications and Environmental Performance Dataset](https://www.opendatabay.com/data/dataset/99b921ee-d99b-414f-af61-36978fa36d92) from Opendatabay ([provider info](https://www.opendatabay.com/data-providers/805f2971-543d-4964-87bf-f7683d655b1e))
 - [Vehicle Sales Cleaned](https://www.kaggle.com/datasets/krishanukalita/vehicle-sales-cleaned) from Kaggle
 
+## Entity Relationship Diagram
+
+- ![Database Diagram](project_media/dbdiagram.png)
+
 ## Project Structure
 
 - `setup/` — SQL scripts for schema creation, cleaning, and data loading
