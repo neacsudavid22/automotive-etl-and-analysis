@@ -7,10 +7,11 @@ SELECT
     c.constructor_name,
     m.model_name,
     v.version_code,
-    v.electric_range_km
+    MAX(v.electric_range_km) AS electric_range_km
 FROM vehicle_versions v
 JOIN vehicle_models m ON v.model_id = m.model_id
-JOIN vehicle_companies c ON m.company_id = c.company_id,
-electric_avg ea
+JOIN vehicle_companies c ON m.company_id = c.company_id
 WHERE LOWER(v.energy) LIKE '%electric%'
-  AND v.electric_range_km > ea.avg_range;
+GROUP BY c.constructor_name, m.model_name, v.version_code
+HAVING MAX(v.electric_range_km) > (SELECT avg_range FROM electric_avg)
+ORDER BY electric_range_km DESC;
