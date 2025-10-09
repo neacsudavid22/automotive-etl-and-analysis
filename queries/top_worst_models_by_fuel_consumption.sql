@@ -1,5 +1,4 @@
-SELECT *
-FROM (
+SELECT * FROM (
     SELECT
         c.brand,
         m.model_name,
@@ -10,5 +9,4 @@ FROM (
     WHERE v.fuel_consumption IS NOT NULL AND v.fuel_consumption > 0
     GROUP BY c.brand, m.model_name
     ORDER BY avg_fuel_consumption DESC
-)
-WHERE ROWNUM <= 10;
+) WHERE ROWNUM <= 10;

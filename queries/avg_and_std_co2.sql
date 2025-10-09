@@ -1,5 +1,3 @@
--- media si deviatia standard a emisiilor de co2 a modelelor cu mai multe versiuni 
-
 SELECT C.brand, M.model_name, M.category,
     ROUND(AVG(V.co2_wltp), 2) AS AVG_CO2_Model,
     ROUND(STDDEV(V.co2_wltp), 2) AS STDDEV_CO2_Model

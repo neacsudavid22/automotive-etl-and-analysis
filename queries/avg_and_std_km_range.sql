@@ -1,5 +1,3 @@
--- Autonomie Medie in Km si deviatia standard intre versiuni per Model cu consum electric
-
 SELECT DISTINCT
     C.brand, M.model_name,
     ROUND(AVG(V.electric_range_km) OVER (PARTITION BY M.model_name), 2) AS Autonomie_medie_Km_Model,

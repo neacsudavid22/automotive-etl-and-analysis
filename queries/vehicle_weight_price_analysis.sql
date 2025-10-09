@@ -10,5 +10,3 @@ JOIN vehicle_versions v ON v.model_id = m.model_id
 JOIN vehicle_companies c ON m.company_id = c.company_id
 GROUP BY c.constructor_name, m.model_name
 ORDER BY price_per_kg DESC;
-
-

@@ -1,7 +1,5 @@
 SELECT
-    LPAD(' ', LEVEL * 5) || name AS hierarchy_element,
-    entity_type,
-    selling_price
+    LPAD(' ', LEVEL * 5) || name AS hierarchy_element, entity_type, selling_price
 FROM (
     SELECT
         'Y-' || sale_year AS id,
@@ -11,9 +9,7 @@ FROM (
         NULL AS selling_price
     FROM vehicle_sales
     GROUP BY sale_year
-
     UNION ALL
-
     SELECT
         'YM-' || sale_year || '-' || sale_month AS id,
         'Y-' || sale_year AS parent_id,
@@ -22,9 +18,7 @@ FROM (
         NULL AS selling_price
     FROM vehicle_sales
     GROUP BY sale_year, sale_month
-
     UNION ALL
-
     SELECT
         'S-' || sale_id AS id,
         'YM-' || sale_year || '-' || sale_month AS parent_id,

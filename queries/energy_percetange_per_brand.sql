@@ -1,5 +1,3 @@
--- Procentul modelelor produse per tip de energie pentru fiecare brand în parte
-
 SELECT
     c.brand,
     v.energy as CONSUMPTION_TYPE,
