@@ -37,12 +37,11 @@ JOIN vehicle_models m
   AND UPPER(TRIM(m.category)) = UPPER(TRIM(cl.vehicle_category));
 
 INSERT INTO vehicle_sales (
-    company_id, model_id, car_size, transmission, car_state,
+    model_id, car_size, transmission, car_state,
     car_condition, odometer, color, interior, seller,
     mmr, selling_price, sale_day, sale_month, sale_year
 )
 SELECT DISTINCT
-    vc.company_id AS company_id,
     vm.model_id AS model_id,
     vs.car_size,
     vs.transmission,
@@ -58,9 +57,6 @@ SELECT DISTINCT
     vs.sale_month,
     vs.sale_year
 FROM raw_vehicle_sales vs
-JOIN vehicle_companies vc 
-    ON UPPER(TRIM(REGEXP_REPLACE(REGEXP_REPLACE(vs.company, ',', ''), '\s+', ' '))) =
-       UPPER(TRIM(REGEXP_REPLACE(REGEXP_REPLACE(vc.brand, ',', ''), '\s+', ' ')))
 JOIN vehicle_models vm 
     ON UPPER(TRIM(REGEXP_REPLACE(REGEXP_REPLACE(vs.model, ',', ''), '\s+', ' '))) =
        UPPER(TRIM(REGEXP_REPLACE(REGEXP_REPLACE(vm.model_name, ',', ''), '\s+', ' ')));
